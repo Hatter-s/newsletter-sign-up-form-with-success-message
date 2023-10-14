@@ -7,8 +7,7 @@ const emailInput = document.querySelector("input[type=email]");
 const emailErrorText = document.querySelector("[error-text]");
 const dismissBtn = document.querySelector("[dismiss-btn]");
 
-signupForm.style.display = 'none'
-successDiv.style.display = 'flex';
+successDiv.style.display = 'none';
 
 
 function validateEmail(inputText) {
