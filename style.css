@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  font-family: "Roboto", monospace;
+  @apply font-normal text-base text-dark-slate-grey;
+}
+
+body {
+  @apply bg-dark-slate-grey;
+}
+
+li {
+  @apply relative ps-8 mb-4;
+  @apply lg:ps-10;
+}
+
+li span {
+  @apply w-4 h-4 bg-tomato absolute rounded-full left-0;
+  @apply lg:w-6 lg:h-6 lg:top-1/2 lg:-translate-y-1/2;
+  @apply before:content-[''] before:h-2 before:w-1 before:border-b-2 before:border-r-2 before:border-white before:absolute before:rotate-45 before:top-[4px] before:left-[6px];
+}
+
+button[type=submit] {
+    @apply block bg-dark-slate-grey text-white p-4 rounded-lg box-border flex-1;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, rgb(236 72 153) 10%, hsl(4, 100%, 67%) 70%);
+}
+
+input {
+    @apply border block p-4 rounded-lg mb-6 outline-none focus:border-charcoal-grey;
+}
+
+input.invalid {
+    @apply text-red-500 border-current bg-red-500/10 placeholder:text-red-500/50;
+}
+
+@media (min-width: 1024px) {
+    li span {
+        @apply before:w-1 before:h-3 before:top-1.5 before:left-[10px];
+    }
+}

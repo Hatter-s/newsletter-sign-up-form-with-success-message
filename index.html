@@ -26,27 +26,96 @@
   </head>
   <body>
     <!-- Sign-up form start -->
+    <main
+      class="bg-transparent lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 w-full lg:w-[1000px]"
+    >
+      <div
+        class="bg-white inline-flex gap-y-12 lg:gap-x-8 flex-col lg:flex-row lg:rounded-[30px] lg:p-4 lg:pl-8"
+        signup-form
+      >
+        <img
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="sign-up-mobile"
+          class="lg:hidden"
+        />
+        <div
+          class="text-xs lg:text-base px-6 flex flex-col justify-center flex-1 mb-12 lg:mb-0"
+        >
+          <h1 class="text-3xl lg:text-6xl font-bold mb-6 tracking-tight">
+            Stay updated!
+          </h1>
+          <p class="mb-6">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="mb-10">
+            <li><span></span>Product discovery and building what matters</li>
+            <li><span></span>Measuring to ensure updates are a success</li>
+            <li><span></span>And much more!</li>
+          </ul>
 
-    Stay updated! Join 60,000+ product managers receiving monthly updates on:
-    Product discovery and building what matters Measuring to ensure updates are
-    a success And much more! Email address email@company.com Subscribe to
-    monthly newsletter
+          <form action="">
+            <div class="flex flex-col">
+              <label
+                for="email"
+                class="text-xs font-bold mb-2 flex justify-between"
+              >
+                <p>Email address</p>
+                <p class="text-red-500 hidden" error-text>
+                  Valid email required
+                </p>
+              </label>
+              <input
+                type="email"
+                placeholder="email@company.com"
+                id="email"
+                name="email"
+              />
+            </div>
+            <div class="flex">
+              <button type="submit" class="submit-button">
+                Subscribe to monthly newsletter
+              </button>
+            </div>
+          </form>
+        </div>
 
-    <!-- Sign-up form end -->
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="sign-up image desktop"
+          class="hidden lg:block"
+        />
+      </div>
+
+      <div class="px-4 flex flex-col justify-between pb-8 lg:pb-12 pt-32 lg:pt-12 lg:px-12 h-[100vh] bg-white lg:absolute lb:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:h-auto lg:rounded-[30px]" success>
+        <div class="lg:pb-12">
+          <img src="./assets/images/icon-success.svg" alt="icon-success" class="mb-12">
+          <h1 class="text-3xl lg:text-6xl font-extrabold mb-6 tracking-tight">
+            Thanks for subscribing!
+          </h1>
+          <p class="text-sm">
+            A confirmation email has been sent to
+            <span class="font-extrabold">ash@loremcompany.com</span>. Please open it and click the button inside to
+            confirm your subscription.
+          </p>
+        </div>
+        <div class="">
+          <button class="p-4 bg-dark-slate-grey text-white w-full rounded-md" dismiss-btn>
+            Dismiss message
+          </button>
+        </div>
+
+      </div>
+    </main>
 
     <!-- Success message start -->
 
-    Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message
-
     <!-- Success message end -->
 
-    <div class="attribution">
+    <div class="hidden lg:block absolute lg:bottom-0 text-white left-1/2 -translate-x-1/2">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-tomato hover:opacity-80"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/Hatter-s" class="text-tomato hover:opacity-80">Hatter-s</a>.
     </div>
     <script type="module" src="/main.js"></script>
   </body>
